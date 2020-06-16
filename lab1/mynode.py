@@ -1,4 +1,4 @@
-class Node:
+class MyNode:
     def __init__(self,initdata):
         self.data = initdata
         self.next = None

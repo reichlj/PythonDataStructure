@@ -1,4 +1,4 @@
-from ordered_linked_list import OrderedList
+from lab5.ordered_linked_list import OrderedList
 
 def main():
     myList = OrderedList()

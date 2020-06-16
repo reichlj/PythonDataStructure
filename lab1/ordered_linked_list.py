@@ -2,7 +2,8 @@
     Description:  ordered List ADT implemented using singly-linked list.
 """
 
-from node import Node
+from lab5\
+    .mynode import MyNode
 
 class OrderedList(object):
 
@@ -19,14 +20,14 @@ class OrderedList(object):
         self._currentIndex = 0
 
     def add(self, newItem):
-        """ Adds the newItem to is sorted spot in the list.
+        """ Adds the newItem to its sorted spot in the list.
             Precondition: newItem is not in the list.
             Postcondition:  newItem is added to the list.
         """
         if self.search(newItem):
             raise ValueError("Cannot not add since item is already in the list!")
                
-        temp = Node(newItem)
+        temp = MyNode(newItem)
         temp.setNext(self._current)
         if self._previous == None:
             self._head = temp
@@ -48,8 +49,18 @@ class OrderedList(object):
                 It has no parameters, but uses self._current, self._previous, and
                 self._currentIndex."""
             # ADD CODE HERE
-            pass
-            
+            if self._current is None:
+                return False
+            if self._current.getData() > targetItem:
+                    return False
+            elif self._current.getData() == targetItem:
+                return True
+            else:
+                self._currentIndex = self._currentIndex +1
+                self._previous = self._current
+                self._current = self._current.getNext()
+                return searchHelper()
+
 
         # START OF SEARCH - DO NOT MODIFY BELOW CODE
         if self._current != None and self._current.getData() == targetItem:
