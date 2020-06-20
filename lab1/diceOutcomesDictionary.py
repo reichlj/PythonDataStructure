@@ -6,7 +6,7 @@ the highest percentage.
 from random import randint
 
 # Global Constants
-NUMBER_OF_ROLLS = 10000
+NUMBER_OF_ROLLS = 10
 DIE_SIDES = 6
 
 def main():
@@ -29,15 +29,15 @@ def calculateFrequentRolls():
 
     # initialize outcomeCounts to all 0s.  The index corresponds to the outcome
     # NOTE:  index positions 0 and 1 are not possible
-    outcomeCounts = []
+    outcomeCounts = dict()
     for count in range(DIE_SIDES*2+1):
-        outcomeCounts.append(0)
+        outcomeCounts[count] = 0
 
     rollAndTallyOutcomes(outcomeCounts)
 
     print("outcomeCounts:",outcomeCounts)    # For debugging
 
-    highestCount = max(outcomeCounts)
+    highestCount = max(outcomeCounts.values())
 
     mostFrequentRolls = findOutcomes(outcomeCounts, highestCount)
 
@@ -60,8 +60,8 @@ def findOutcomes(outcomeCounts, highestCount):
     """Returns a list of outcomes with the highest count."""
     highestOutcomesList = []
 ##  ADD CODE HERE
-    for index,k in enumerate(outcomeCounts):
-        if k == highestCount:
+    for index in outcomeCounts:
+        if outcomeCounts[index] == highestCount:
             highestOutcomesList.append(index)
 
     return highestOutcomesList
