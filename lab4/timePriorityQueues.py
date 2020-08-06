@@ -1,9 +1,9 @@
 # timePriorityQueues.py
 
-from reverse_sorted_list_priority_queue import ReverseSortedListPriorityQueue
-from sorted_list_priority_queue import SortedListPriorityQueue
-from list_priority_queue import ListPriorityQueue
-from priority_queue import PriorityQueue
+from lab4.reverse_sorted_list_priority_queue import ReverseSortedListPriorityQueue
+from lab4.sorted_list_priority_queue import SortedListPriorityQueue
+from lab4.list_priority_queue import ListPriorityQueue
+from lab4.priority_queue import PriorityQueue
 import time
 import random
 

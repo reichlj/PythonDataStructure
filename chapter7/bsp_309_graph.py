@@ -1,4 +1,4 @@
-from chapter7.modGraph import Graph as Graph
+from chapter7.modGraph import Graph
 
 g = Graph()
 for i in range(6):

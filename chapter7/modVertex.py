@@ -5,6 +5,8 @@ class Vertex:
         self.connectedTo = {}
         self.distance = -1
         self.predecessor = None
+        self.discovery_time = -1
+        self.finish_time = -1
         self.color = "white"
 
     def __str__(self):
@@ -40,3 +42,15 @@ class Vertex:
 
     def setPred(self, predecessor):
         self.predecessor = predecessor
+
+    def getDiscovery(self):
+        return self.discovery_time
+
+    def setDiscovery(self, time):
+        self.discovery_time = time
+
+    def getFinish(self):
+        return self.finish_time
+
+    def setFinish(self, time):
+        self.finish_time = time

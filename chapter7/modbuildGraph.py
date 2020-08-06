@@ -1,6 +1,6 @@
-from chapter7.modGraph import Graph as Graph
-from chapter7.mybfs import bfs as bfs
-from chapter7.mybfs import traverse as traverse
+from chapter7.modGraph import Graph
+from chapter7.mybfs import bfs
+from chapter7.mybfs import traverse
 
 def buildGraph(wordFile, debug=False):
     d = {}

@@ -9,5 +9,5 @@ def drawSpiral(myTurtle, lineLen):
         myTurtle.right(90)
         drawSpiral(myTurtle,lineLen-5)
 
-drawSpiral(myTurtle,100)
+drawSpiral(myTurtle,200)
 myWin.exitonclick()

@@ -1,4 +1,4 @@
-from myqueue import Queue as Queue
+from myqueue import Queue
 
 def bfs(g,start):
     start.setDistance(0)
