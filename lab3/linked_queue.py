@@ -15,9 +15,10 @@ class LinkedQueue(object):
         node = Node(item)
         if self._size == 0:
             self._front = node
+            self._rear = node
         else:
             self._rear.setNext(node)
-        self._rear = node
+            self._rear = node
         self._size = self._size + 1
 
     def dequeue(self):
