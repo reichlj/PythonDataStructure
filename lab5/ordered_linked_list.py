@@ -51,16 +51,15 @@ class OrderedList(object):
             # ADD CODE HERE
             if self._current is None:
                 return False
-            if self._current.getData() > targetItem:
-                    return False
             elif self._current.getData() == targetItem:
                 return True
+            elif self._current.getData() > targetItem:
+                return False
             else:
-                self._currentIndex = self._currentIndex +1
+                self._currentIndex = self._currentIndex + 1
                 self._previous = self._current
                 self._current = self._current.getNext()
                 return searchHelper()
-
 
         # START OF SEARCH - DO NOT MODIFY BELOW CODE
         if self._current != None and self._current.getData() == targetItem:
